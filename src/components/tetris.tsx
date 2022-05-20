@@ -22,7 +22,8 @@ type TetrisState = {
   isPaused: boolean,
   field: any[],
   timerId: any,
-  tiles: number[][][][]
+  tiles: number[][][][],
+  action: string
 }
 
 // Create Tetris component
@@ -59,6 +60,7 @@ class Tetris extends React.Component<TetrisProps, TetrisState> {
       isPaused: false,
       field: field,
       timerId: null,
+      action: '',
       tiles: [
         // 7 tiles
         // Each tile can be rotated 4 times (x/y coordinates)
@@ -175,7 +177,34 @@ class Tetris extends React.Component<TetrisProps, TetrisState> {
    * @param {string} command
    * @memberof Tetris
    */
-  handleBoardUpdate(command: string) {
+
+   onKeyDownHandler = (event:React.KeyboardEvent<HTMLDivElement>) =>{
+    console.log(event.keyCode)
+    switch (event.keyCode) {
+      case 65:
+        this.setState({action: 'left'})
+        this.handleBoardUpdate(this.state.action)
+        break;
+        case 68:
+          this.setState({action: 'right'})
+          this.handleBoardUpdate(this.state.action)
+          break;
+        case 83:
+          this.setState({action: 'down'})
+          this.handleBoardUpdate(this.state.action)
+          break;
+        case 87:
+          this.setState({action: 'rotate'})
+          this.handleBoardUpdate(this.state.action)
+          break;
+          
+
+      default:
+        break;
+    }
+   }
+
+  handleBoardUpdate = (command: string = '') => {
     // Do nothing if game ends, or is paused
     if (this.state.gameOver || this.state.isPaused) {
       return
@@ -469,6 +498,9 @@ class Tetris extends React.Component<TetrisProps, TetrisState> {
         />
 
         {/* Buttons to control blocks */}
+        <div className="container" tabIndex={0} onKeyDown={this.onKeyDownHandler} auto-focus>
+          vana
+        </div>
         <div className='tetris__block-controls'>
           <button className="btn" onClick={() => this.handleBoardUpdate('left')}>Left</button>
 
@@ -480,7 +512,7 @@ class Tetris extends React.Component<TetrisProps, TetrisState> {
         </div>
 
         {/* Buttons to control game */}
-        <div className="tetris__game-controls">
+        <div className="tetris__game-controls" onKeyDown={this.onKeyDownHandler}>
           <button className="btn" onClick={this.handleNewGameClick}>New Game</button>
 
           <button className="btn" onClick={this.handlePauseClick}>{this.state.isPaused ? 'Resume' : 'Pause'}</button>
