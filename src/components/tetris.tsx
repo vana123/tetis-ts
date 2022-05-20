@@ -2,6 +2,7 @@ import * as React from 'react'
 
 // Import TetrisBoard component
 import TetrisBoard from './tetris-board'
+import { Start } from './Start/Start';
 
 // Define props for Tetris component
 type TetrisProps = {
@@ -57,7 +58,7 @@ class Tetris extends React.Component<TetrisProps, TetrisState> {
       level: 1,
       tileCount: 0,
       gameOver: false,
-      isPaused: false,
+      isPaused: true,
       field: field,
       timerId: null,
       action: '',
@@ -178,7 +179,9 @@ class Tetris extends React.Component<TetrisProps, TetrisState> {
    * @memberof Tetris
    */
 
-   onKeyDownHandler = (event:React.KeyboardEvent<HTMLDivElement>) =>{
+    // unPouze = () 
+
+    onKeyDownHandler = (event:React.KeyboardEvent<HTMLDivElement>) =>{
     console.log(event.keyCode)
     switch (event.keyCode) {
       case 65:
@@ -487,7 +490,11 @@ class Tetris extends React.Component<TetrisProps, TetrisState> {
 
   render() {
     return (
+      
       <div className="tetris">
+        <Start
+          handlePauseClick={this.handlePauseClick}
+        />
         {/* Tetris board */}
         <TetrisBoard
           field={this.state.field}
@@ -499,7 +506,7 @@ class Tetris extends React.Component<TetrisProps, TetrisState> {
 
         {/* Buttons to control blocks */}
         <div className="container" tabIndex={0} onKeyDown={this.onKeyDownHandler} auto-focus>
-          vana
+          imputer
         </div>
         <div className='tetris__block-controls'>
           <button className="btn" onClick={() => this.handleBoardUpdate('left')}>Left</button>

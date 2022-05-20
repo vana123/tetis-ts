@@ -1,0 +1,27 @@
+.Start {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(109, 109, 109, 0.537);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Start__button {
+    display: flex;
+    height: 20vw;
+    width: 20vw;
+    background-color: rgba(109, 109, 109, 0.898);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.Start__button:hover {
+    background-color: rgba(109, 109, 109, 0.709);
+}
+.inactiveFlag {
+    display: none;
+}
