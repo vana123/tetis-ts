@@ -7,4 +7,4 @@ import Tetris from './components/tetris'
 // Import styles
 import './styles/styles.css'
 
-ReactDOM.render(<Tetris boardWidth="14" boardHeight="30" />, document.getElementById('root'))
+ReactDOM.render(<Tetris boardWidth="14" boardHeight="25" />, document.getElementById('root'))

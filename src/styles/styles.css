@@ -10,6 +10,12 @@ html {
   box-sizing: inherit;
 }
 
+.wraper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .tetris {
   display: flex;
   /* padding: 8px; */
@@ -19,6 +25,7 @@ html {
 
 .tetris-board {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -76,21 +83,47 @@ html {
 }
 
 /* Styles for buttons */
-.tetris__block-controls,
-.tetris__game-controls {
+.tetris__controls{
   margin-top: 16px;
-  display: flex;
+  display: grid;
+  gap: 5px;
+  grid-template-areas: ". Pause ."
+                     "left rotate right"
+                       ". down ."
+                       ". NewGame .";
   justify-content: center;
+  align-content: center;
 }
 
 .tetris__game-controls {
   margin-bottom: 16px;
 }
 
+.left{
+  grid-area: left;
+}
+.down{
+  grid-area: down;
+}
+.right{
+  grid-area: right;
+}
+.rotate{
+  grid-area: rotate;
+}
+.Pause{
+  grid-area: Pause;
+}
+.NewGame{
+  /* margin-left: 20px; */
+  height: 50px;
+  grid-area: NewGame;
+}
+
 .btn {
   padding: 12px 21px;
-  height: 40px;
-  margin: 5px;
+  /* height: 40px; */
+  /* margin: 5px; */
   font-size: 15px;
   color: #fff;
   background-color: #5d5d5d;

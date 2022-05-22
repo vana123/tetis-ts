@@ -496,34 +496,36 @@ class Tetris extends React.Component<TetrisProps, TetrisState> {
           handlePauseClick={this.handlePauseClick}
         />
         {/* Tetris board */}
-        <TetrisBoard
-          field={this.state.field}
-          gameOver={this.state.gameOver}
-          score={this.state.score}
-          level={this.state.level}
-          rotate={this.state.tileRotate}
-        />
+        <div className="wraper">
 
-        {/* Buttons to control blocks */}
-        <div className="container" tabIndex={0} onKeyDown={this.onKeyDownHandler} auto-focus>
-          imputer
+          <TetrisBoard
+            field={this.state.field}
+            gameOver={this.state.gameOver}
+            score={this.state.score}
+            level={this.state.level}
+            rotate={this.state.tileRotate}
+          />
+
+          {/* Buttons to control blocks */}
+          {/* <div className="container" tabIndex={0} onKeyDown={this.onKeyDownHandler} auto-focus>
+            imputer
+          </div> */}
+          <div className='tetris__controls'>
+            <button className="btn left" onClick={() => this.handleBoardUpdate('left')}>Left</button>
+
+            <button className="btn down" onClick={() => this.handleBoardUpdate('down')}>Down</button>
+
+            <button className="btn right" onClick={() => this.handleBoardUpdate('right')}>Right</button>
+
+            <button className="btn rotate" onClick={() => this.handleBoardUpdate('rotate')}>Rotate</button>
+
+            <button className="btn NewGame" onClick={this.handleNewGameClick}>New Game</button>
+
+            <button className="btn Pause" onClick={this.handlePauseClick}>{this.state.isPaused ? 'Resume' : 'Pause'}</button>
+          </div>
         </div>
-        <div className='tetris__block-controls'>
-          <button className="btn" onClick={() => this.handleBoardUpdate('left')}>Left</button>
 
-          <button className="btn" onClick={() => this.handleBoardUpdate('down')}>Down</button>
-
-          <button className="btn" onClick={() => this.handleBoardUpdate('right')}>Right</button>
-
-          <button className="btn" onClick={() => this.handleBoardUpdate('rotate')}>Rotate</button>
-        </div>
-
-        {/* Buttons to control game */}
-        <div className="tetris__game-controls" onKeyDown={this.onKeyDownHandler}>
-          <button className="btn" onClick={this.handleNewGameClick}>New Game</button>
-
-          <button className="btn" onClick={this.handlePauseClick}>{this.state.isPaused ? 'Resume' : 'Pause'}</button>
-        </div>
+        
       </div>
     )
   }
