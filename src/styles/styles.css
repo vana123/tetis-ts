@@ -17,7 +17,7 @@ html {
 }
 
 .tetris {
-  display: flex;
+  /* display: flex; */
   /* padding: 8px; */
   /* margin: 0 auto; */
   width: 500px;
@@ -45,41 +45,53 @@ html {
 /* Styles for tiles */
 [class*=col-] {
   padding: 12px;
-  border: 1px solid #1a1c19;
+  border: 1px solid #000000;
 }
 
 /* Default (empty) board column */
 .col-0 {
-  background-color: #020202;
+  background-color: #3e3e3e;
 }
 
 /* Colors for tiles */
 .col-1 {
-  background-color: #f21620;
+  background-color: #ff686f;
 }
 
 .col-2 {
-  background-color: #10ac84;
+  background-color: #4af4ca;
 }
 
 .col-3 {
-  background-color: #5f27cd;
+  background-color: #7143cd;
 }
 
 .col-4 {
-  background-color: #d925cf;
+  background-color: #cd30c5;
 }
 
 .col-5 {
-  background-color: #48dbfb;
+  background-color: #2c96ae;
 }
 
 .col-6 {
-  background-color: #fd4964;
+  background-color: #a70e25;
 }
 
 .col-7 {
-  background-color: #72fa4e;
+  background-color: #219501;
+}
+.col-8 {
+  background-color: #b0b512;
+}
+.col-9 {
+  background-color: #0084ff;
+}
+.col-10 {
+  background-color: #aa00ff;
+}
+.col-11 {
+  background-color: #ff0048;
 }
 
 /* Styles for buttons */
