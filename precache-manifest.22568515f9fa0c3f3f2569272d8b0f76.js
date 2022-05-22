@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4579fdbe22e340b74341666d8888167e",
+    "revision": "10c5273135b92c6bae6e6587ac141b2e",
     "url": "/tetis-ts/index.html"
   },
   {
-    "revision": "b09f7175ef5548bd885c",
-    "url": "/tetis-ts/static/css/main.eb8c9b6f.chunk.css"
+    "revision": "4abfcd982ddf325e9612",
+    "url": "/tetis-ts/static/css/main.ee431507.chunk.css"
   },
   {
     "revision": "529967f4324721c1ab52",
     "url": "/tetis-ts/static/js/2.a5ebfcba.chunk.js"
   },
   {
-    "revision": "b09f7175ef5548bd885c",
+    "revision": "4abfcd982ddf325e9612",
     "url": "/tetis-ts/static/js/main.dc82e9c4.chunk.js"
   },
   {
