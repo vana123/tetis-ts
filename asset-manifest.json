@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tetis-ts/static/css/main.6a0f2e60.chunk.css",
+    "main.js": "/tetis-ts/static/js/main.0877d808.chunk.js",
+    "main.js.map": "/tetis-ts/static/js/main.0877d808.chunk.js.map",
+    "runtime~main.js": "/tetis-ts/static/js/runtime~main.bdaf87c9.js",
+    "runtime~main.js.map": "/tetis-ts/static/js/runtime~main.bdaf87c9.js.map",
+    "static/js/2.a5ebfcba.chunk.js": "/tetis-ts/static/js/2.a5ebfcba.chunk.js",
+    "static/js/2.a5ebfcba.chunk.js.map": "/tetis-ts/static/js/2.a5ebfcba.chunk.js.map",
+    "index.html": "/tetis-ts/index.html",
+    "precache-manifest.df36e8f192a8683cbb0a8aaf9ff4a59b.js": "/tetis-ts/precache-manifest.df36e8f192a8683cbb0a8aaf9ff4a59b.js",
+    "service-worker.js": "/tetis-ts/service-worker.js",
+    "static/css/main.6a0f2e60.chunk.css.map": "/tetis-ts/static/css/main.6a0f2e60.chunk.css.map"
+  }
+}
